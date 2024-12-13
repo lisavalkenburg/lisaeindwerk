@@ -1,0 +1,329 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+  
+  /* bron: mijn broer Tristan heeft me geholpen met de css code, boiler plate van hem gekregen voor CSS */
+  
+  /*********************/
+  /* CUSTOM PROPERTIES */
+  /*********************/
+  /* dit zo aangeven in comments bron: Tristan mijn broer*/
+ 
+  :root {
+    --white:#fff;
+    --black: #000;
+    --bg:#dec6ae;
+    --color1: #c49a70;
+    --color2: #201d1a;
+
+    --boxShadow1: 0 1rem 2rem rgba(36, 36, 36, 0.264);
+
+    --headerFont: "headline-gothic-atf", sans-serif;
+    --pFont: "modula-sans", sans-serif;
+}
+/* bron: idee om met var te werken: tristan valkenburg*/
+  
+  /***********/
+  /* STYLING */
+  /***********/
+
+  
+body {
+	margin: 0;
+    color: var(--black);
+	background-color: var(--bg);
+    width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+	text-decoration: none;
+	color: inherit;
+	list-style: none;
+	transition: all ease .4s;
+}
+/* bron: Tristan Valkenburg */
+
+section{
+    width: 100%;
+}
+
+h1{
+    margin: 0;
+    font-size: 5rem;
+    font-family: var(--pFont);
+}
+
+h2{
+    font-size: 4rem;
+    font-family: var(--pFont);
+}
+
+h3{
+    width: fit-content;
+    font-family: var(--pFont);
+    font-size: 3rem;
+}
+
+p,
+ul{
+    font-size: 1.5rem;
+    font-family: var(--pFont);
+}
+
+  /******************/
+  /* HEADER STYLING */
+  /******************/
+
+header nav{
+    height: 4rem;
+    width: 100vw;
+    background-color: var(--color1);
+}
+
+header nav ul{
+    height: 100%;
+    margin: 0;
+    padding: 0 2rem;
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transition: all ease .5s;
+}
+
+header nav ul li a{
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+}
+
+nav ul li a:hover {
+    transform: rotate(5deg);
+    color: var(--white);
+    background-color: var(--bg);
+}
+
+a.Currentpage {
+    background-color: var(--bg)
+}
+
+
+  /******************/
+  /* footer STYLING */
+  /******************/
+
+ footer {
+    background-color: var(--color2);
+    color: var(--white);
+    padding: 2rem;
+ }
+
+  /****************/
+  /* MAIN STYLING */
+  /****************/
+
+  /* HOME */
+main h2 {
+    text-align: center;
+    font-size: 5rem;
+    margin: 5rem;
+}
+
+main > img{
+    width: 100vw; 
+}
+
+.kutschool{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kutschool > div{
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.kutschool > div div{
+    margin: 0 2rem;
+}
+
+.kutschool > div img{
+    height: 25rem;
+    margin: 5rem;
+}
+.brullen > img{
+    width: 100%;
+}
+
+/* bron: Sarah heeft mij geholpen met de backgroundfoto, 
+docent met de padding van de tekst */
+#achtergrondfoto{
+    background-image: url("/images/lachensarah.png");
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-top: 3em;
+}
+
+#achtergrondfoto h2{
+    font-size: 3rem;
+    display: flex;
+    justify-content: end;
+}
+
+#achtergrondfoto p{
+    margin: 0 2rem;
+    display: flex;
+    justify-content: end;
+}
+
+.titel{
+    width: 100%;
+    margin: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titel img{
+    height: 20rem;
+    margin: 0 0 1rem 0;
+}
+
+#video{
+    display: flex;
+    justify-content: center;
+    margin: 4rem;
+}
+
+/* OVER ONS */
+
+.wzw{
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.wzw > div{
+    width: 100%;
+    padding-bottom: 2rem;
+    color: var(--black);
+    background-color: var(--color1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* bron: tristan heeft mij geholpen */
+.wzw > div:first-of-type{
+    color: var(--white);
+    background-color: var(--color2);
+}
+
+/* bron: tristan heeft mij geholpen */
+.wzw > div:first-of-type p{
+    margin-top: 0;
+    width: 80%;
+    text-align: center;
+}
+
+/* bron: tristan heeft mij geholpen */
+.wzw > div:not(div:first-of-type){
+    height: fit-content;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.wzw > div > div{
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.wzw > div > div h3{
+    margin: 0;
+}
+
+.wzw > div > div p{
+    width: 40vw;
+    text-align: right;
+}
+
+.wzw > div img{
+    height: 22rem;
+    margin: 0 8rem;
+}
+
+/* BRON: https://stackoverflow.com/questions/35963620/
+    ignoring-rows-using-not-and-styling-with-nth-of-type-odd-even */
+.wzw > div:nth-child(2n+3){
+    background-color: var(--bg);
+    justify-content: flex-start !important;
+}
+
+/* bron: tristan heeft mij geholpen */
+.wzw > div:nth-child(2n+3) div {
+    align-items: start;
+}
+
+/* bron: tristan heeft mij geholpen */
+.wzw > div:nth-child(2n+3) div p{
+    text-align: left;
+}
+
+/* OVERZICHT */
+
+.afl{
+    color: var(--white);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.afl > div{
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 2rem;
+    margin-bottom: .5rem;
+    background-color: var(--color2)
+}
+
+.afl div div{
+    margin: 0 2rem;
+}
+
+.afl div div img{
+    height: 2rem;
+}
+
+.afl > div > img{
+    height: 18rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
